@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <app-page-header
+    [pageHeader]="ordersPreparingConst.ordersPreparingPageHeader"
+    [pageSubHeader]="ordersPreparingConst.ordersPreparingPageSubHeader"
+  ></app-page-header>
+  <div class="page-layout">
+    <app-list-items
+      [itemData]="filteredData"
+      [isChangeButtonVisible]="false"
+      [itemHeader]="ordersPreparingConst.orderPreparingItemHeader"
+      (onDetailsClick)="redirectToDetailPage($event)"
+    ></app-list-items>
+  </div>
+</div>

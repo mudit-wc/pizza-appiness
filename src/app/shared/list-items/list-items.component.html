@@ -1,0 +1,42 @@
+<mat-list>
+  <div mat-subheader>{{ itemHeader }}</div>
+  <div *ngIf="!isDetailsVisible">
+    <mat-list-item *ngFor="let item of itemData">
+      <!-- <mat-icon mat-list-icon>folder</mat-icon> -->
+      <div mat-line>Customer Name: {{ item.customerName }}</div>
+      <div mat-line>No. of Items: {{ item.numberOfItems }}</div>
+      <div mat-line>Total Ammount: {{ item.totalAmmountOfOrder }}</div>
+      <div mat-line>Status: {{ item.status }}</div>
+      <div class="row col-8">
+        <div class="col-sm-3" *ngIf="isChangeButtonVisible">
+          <div mat-line>
+            <app-button
+              (btnClick)="onStatusBtnClick(item.id, item.status)"
+              [label]="'Change Status'"
+            ></app-button>
+          </div>
+        </div>
+        <div class="col-cm-3">
+          <div mat-line>
+            <app-button
+              (btnClick)="onBtnClick(item.id)"
+              [label]="'Details'"
+            ></app-button>
+          </div>
+        </div>
+      </div>
+    </mat-list-item>
+  </div>
+  <div *ngIf="isDetailsVisible">
+    <mat-list-item *ngFor="let item of detailsData">
+      <!-- <mat-icon mat-list-icon>folder</mat-icon> -->
+      <div mat-line>Customer Name: {{ item.customerName }}</div>
+      <span mat-line>Food Items: </span>
+      <div *ngFor="let pick of item.itemsName" mat-line class="foodItem">
+        {{ pick.item }}  Rs{{ pick.cost }}
+      </div>
+      <div mat-line>Total price: {{ item.totalAmmountOfOrder }}</div>
+      <div mat-line>Address: {{ item.address }}</div>
+    </mat-list-item>
+  </div>
+</mat-list>

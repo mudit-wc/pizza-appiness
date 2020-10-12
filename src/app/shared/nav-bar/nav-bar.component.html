@@ -1,0 +1,8 @@
+<mat-toolbar class="matToolbar">
+  <mat-toolbar-row>
+    <span id="appTitle">{{appTitle}}</span>
+    <span id="routerLinks" >
+        <a *ngFor="let item of data" href="/{{item.route}}">{{item.name}}</a>
+    </span>
+</mat-toolbar-row>
+</mat-toolbar>

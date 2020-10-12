@@ -1,1 +1,32 @@
 /* You can add global styles to this file, and also import other style files */
+@import "bootstrap/dist/css/bootstrap.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* to be used as header class for all usage components */
+.page-header {
+  margin-bottom: 15px !important;
+  margin: 0 auto !important;
+  width: 95% !important;
+}
+
+/* to be used as layout class for all usage components */
+.page-layout {
+  margin: 0 auto !important;
+  margin-top: 50px !important;
+  width: 85% !important;
+  /* height: 100% !important; */
+  border-style: none !important;
+  background-color: whitesmoke !important;
+}
+
+.wrapper {
+  padding: 20px;
+}

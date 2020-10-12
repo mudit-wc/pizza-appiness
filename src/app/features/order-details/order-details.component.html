@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <app-page-header
+    [pageHeader]="orderDetailConst.orderDetailsPageHeader"
+    [pageSubHeader]="orderDetailConst.orderDetailsPageSubHeader"
+  ></app-page-header>
+  <div class="page-layout">
+    <app-list-items
+      [isDetailsVisible]="true"
+      [itemHeader]="orderDetailConst.orderDetailsItemHeader"
+      [detailsData]="filterData"
+    ></app-list-items>
+    <app-button (btnClick)="onBackClick()" [label]="'Back'"></app-button>
+  </div>
+</div>

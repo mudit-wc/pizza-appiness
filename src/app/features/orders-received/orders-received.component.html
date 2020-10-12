@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <app-page-header
+    [pageHeader]="ordersReceivedConst.orderReceivedPageHeader"
+    [pageSubHeader]="ordersReceivedConst.orderReceivedSubPageHeader"
+  ></app-page-header>
+  <div class="page-layout">
+    <app-list-items
+      [itemData]="filteredData"
+      [isChangeButtonVisible]="false"
+      [itemHeader]="ordersReceivedConst.ordersReceivedItemHeader"
+      (onDetailsClick)="redirectToDetailPage($event)"
+    ></app-list-items>
+  </div>
+</div>

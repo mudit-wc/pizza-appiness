@@ -2,6 +2,15 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
 
+## Project Architeture
+ PizzaAppiness containes `Shared Module`, which containes the reusable components used by the project and integrated in the `Features Module`.
+
+## Install dependencies
+Run `npm install` to install the node modules.
+
+## External Dependencies
+Angular Material, Bootstrap
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.

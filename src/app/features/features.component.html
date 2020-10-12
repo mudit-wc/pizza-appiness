@@ -1,0 +1,14 @@
+<div class="wrapper">
+  <app-page-header
+    [pageHeader]="featureConstants.featuresPageHeader"
+    [pageSubHeader]="featureConstants.featuresPageSubHeader"
+  ></app-page-header>
+  <div class="page-layout">
+    <app-list-items
+      [itemData]="ordersData"
+      [itemHeader]="featureConstants.itemHeader"
+      (onDetailsClick)="redirectToDetailPage($event)"
+      (onChangeStatusClick)="updateStatus($event.id, $event.status)"
+    ></app-list-items>
+  </div>
+</div>
